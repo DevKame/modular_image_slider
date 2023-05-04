@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #212529;
+    padding-top: 1%;
+    padding-left: 30%;
+}
+#container {
+    border: 3px solid #3e3e45;
+    border-radius: .3rem;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px 1px #111 inset;
+}
+.arrows {
+    width: 10%;
+    height: 25%;
+    cursor: pointer;
+}
+#arrow-left {
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(62, 62, 69)" d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6L14 18Z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50%;
+}
+
+#arrow-right {
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g transform="rotate(180 12 12)"><path fill="rgb(62, 62, 69)" d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6L14 18Z"/></g></svg>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50%;
+}
+#img-window {
+    position: relative;
+    border: 2px solid #111;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+}
+#img-window img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: left .4s;
+    pointer-events: none;
+}
+#img-window img.myPics {
+    position: absolute;
+    top: 0;
+    left: -200%;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+.right-pic {
+    left: 100% !important;
+}
+.left-pic {
+    left: -100% !important;
+}
+.no-trans {
+    transition: none !important;
+}
